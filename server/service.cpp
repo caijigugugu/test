@@ -269,7 +269,7 @@ void Service::callApiWithMultipart(const QString &endpoint, const QString &fileP
 
 void Service::callApiWithMultipart(const QString &endpoint, const QJsonObject &formData) {
     QNetworkAccessManager *manager = new QNetworkAccessManager(this);
-
+    qDebug() << "callApiWithMultipart---------------------------------"<<formData;
     // 创建请求
     QUrl url(QString("http://127.0.0.1:8646") + endpoint);
     QNetworkRequest request(url);
